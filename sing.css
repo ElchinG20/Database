@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+body {
+  height:100vh;
+  font-family: 'Poppins', sans-serif;
+  font-size:12.5vw;
+  
+  overflow: hidden;
+  background-color: #5161ce;
+}
+
+button {
+	border-radius: 25px;
+	border: 1px solid transparent;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 5px 20px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.button:active {
+	transform: scale(0.95);
+}
+
+.button:focus {
+	outline: none;
+}
+
+button.ghost {
+	background-color: transparent;
+    font-size: 30px;
+	cursor: pointer;
+}
+
+.form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+.input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+.disappear {
+  position: absolute;
+  left:0;
+  right:0;
+  margin: auto;
+  width:100%;
+  text-align: center;
+  height:fit-content;
+  bottom:0;
+  top:0;
+}
+.disappear span {
+  display: inline-block;
+  color:transparent;
+  text-shadow: 0px 0px 0px whitesmoke;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+}
+.disappear span:nth-child(1){
+  animation-name: disappearleft;
+}
+.disappear span:nth-child(2){
+  animation-name: disappearleft;
+  animation-delay: .3s;
+}
+.disappear span:nth-child(3){
+  animation-name: disappearight;
+  animation-delay: .6s;
+}
+.disappear span:nth-child(4){
+  animation-name: disappearleft;
+  animation-delay: .8s;
+}
+.disappear span:nth-child(5){
+  animation-name: disappearight;
+  animation-delay: 1s;
+}
+.disappear span:nth-child(6){
+  animation-name: disappearight;
+  animation-delay: 1.3s;
+}
+.disappear span:nth-child(7){
+  animation-name: disappearleft;
+  animation-delay: 1.6s;
+}
+.disappear span:nth-child(8){
+  animation-name: disappearight;
+  animation-delay: 2s;
+}
+.disappear span:nth-child(9){
+    animation-name: disappearright;
+    animation-delay: 5s;
+}
+@keyframes disappearleft{
+  50% {transform: skew(50deg) translateY(-200%);
+      text-shadow: 0px 0px 50px;
+        opacity: 0;
+  }
+}
+@keyframes disappearight{
+  50% {transform: skew(-50deg) translateY(-200%);
+      text-shadow: 0px 0px 50px;
+        opacity: 0;
+  }
+}
